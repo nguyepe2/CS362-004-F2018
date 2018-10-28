@@ -1,0 +1,73 @@
+        -:    0:Source:unittest2.c
+        -:    0:Graph:unittest2.gcno
+        -:    0:Data:unittest2.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "dominion.h"
+        -:    2:#include "dominion_helpers.h"
+        -:    3:#include <string.h>
+        -:    4:#include <stdio.h>
+        -:    5:#include <assert.h>
+        -:    6:#include "rngs.h"
+        -:    7:#include <stdlib.h>
+        -:    8:#include <time.h>
+        -:    9:
+function main called 1 returned 100% blocks executed 95%
+        1:   10:int main() {
+        1:   11:  srand(time(NULL));
+call    0 returned 100%
+call    1 returned 100%
+        -:   12:  int k1;
+        -:   13:  int k2;
+        -:   14:  int k3;
+        -:   15:  int k4;
+        -:   16:  int k5;
+        -:   17:  int k6;
+        -:   18:  int k7;
+        -:   19:  int k8;
+        -:   20:  int k9;
+        -:   21:  int k10;
+        -:   22:  int i;
+        -:   23:  int* result;
+        -:   24:
+        1:   25:  k1=rand(); 
+call    0 returned 100%
+        1:   26:  k2=rand();
+call    0 returned 100%
+        1:   27:  k3=rand();
+call    0 returned 100%
+        1:   28:  k4=rand();
+call    0 returned 100%
+        1:   29:  k5=rand();
+call    0 returned 100%
+        1:   30:  k6=rand();
+call    0 returned 100%
+        1:   31:  k7=rand();
+call    0 returned 100%
+        1:   32:  k8=rand();
+call    0 returned 100%
+        1:   33:  k9=rand();
+call    0 returned 100%
+        1:   34:  k10=rand();
+call    0 returned 100%
+        -:   35:
+        1:   36:  result=kingdomCards(k1, k2, k3, k4, k5, k6, k7, k8, k9, k10);
+call    0 returned 100%
+        -:   37:
+       11:   38:  for(i=1; i<11; i++) {
+branch  0 taken 91%
+branch  1 taken 9% (fallthrough)
+       10:   39:      if(result[i]!=NULL) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+       10:   40:        printf("Test successful\n");
+call    0 returned 100%
+        -:   41:      }
+        -:   42:      else {
+    #####:   43:        printf("Test failed\n");
+call    0 never executed
+        -:   44:      }
+        -:   45:  }
+        -:   46:
+        1:   47:  return 0;
+        -:   48:}
